@@ -20,7 +20,8 @@ Points of Consideration:
 - Cap Rate = NOI / Purchase Price (%)
 
 
-#Videos (Steps the creation)
+#Videos (Steps for the creation)
 1. Create a toolbar - https://youtu.be/SKZoC-4Tim0
 2. Create routes with Lazy Loading - https://youtu.be/XFyuYzH6dIk
-3. 
+3. Create the interface and table list - https://youtu.be/SinLx28ZANw
+4. 
