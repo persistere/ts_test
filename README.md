@@ -18,3 +18,8 @@ Points of Consideration:
 - Address 
 - NOI (Net Operating Income) ($) 
 - Cap Rate = NOI / Purchase Price (%)
+
+
+#Videos (Steps the creation)
+1. Create a toolbar
+2. 
