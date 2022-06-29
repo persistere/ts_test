@@ -1,5 +1,7 @@
 # TermSheet Angular Coding Challenge
 
+https://stackblitz.com/edit/angular-ivy-mch9kp?file=angular.json
+
 TermSheet is a web application that allows real estate professionals to manage their real estate deals. We would like you to build a simple version of this application.
 
 Technical goals:
