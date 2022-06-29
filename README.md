@@ -22,4 +22,5 @@ Points of Consideration:
 
 #Videos (Steps the creation)
 1. Create a toolbar - https://youtu.be/SKZoC-4Tim0
-2. 
+2. Create routes with Lazy Loading - https://youtu.be/XFyuYzH6dIk
+3. 
