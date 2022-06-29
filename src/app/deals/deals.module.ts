@@ -1,6 +1,7 @@
+import { AppMaterialModule } from './../shared/app-material/app-material.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatTableModule } from '@angular/material/table';
+
 
 import { DealsRoutingModule } from './deals-routing.module';
 import { DealsComponent } from './deals/deals.component';
@@ -14,7 +15,7 @@ import { DealsComponent } from './deals/deals.component';
   imports: [
     CommonModule,
     DealsRoutingModule,
-    MatTableModule
+    AppMaterialModule
   ]
 })
 export class DealsModule { }
