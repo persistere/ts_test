@@ -10,7 +10,8 @@ Technical goals:
 
 Points of Consideration:
 
-- There are no tricks or gotchas!
+2. There are no tricks or gotchas!
+++++++++++++++++++++++++++++++++++++++++++++
 
 - Deal Name 
 - Purchase Price ($) 
