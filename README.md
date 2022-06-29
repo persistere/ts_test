@@ -11,6 +11,7 @@ Technical goals:
 Points of Consideration:
 
 2. There are no tricks or gotchas!
+
 ++++++++++++++++++++++++++++++++++++++++++++
 
 - Deal Name 
@@ -24,4 +25,5 @@ Points of Consideration:
 1. Create a toolbar - https://youtu.be/SKZoC-4Tim0
 2. Create routes with Lazy Loading - https://youtu.be/XFyuYzH6dIk
 3. Create the interface and table list - https://youtu.be/SinLx28ZANw
-4. 
+4. Improving and organization Moludes - https://youtu.be/lNMhze4nkWY
+5. 
