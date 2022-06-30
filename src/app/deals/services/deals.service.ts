@@ -11,6 +11,8 @@ export class DealsService {
 
   private readonly API = 'https://persistere.com.br/termsheet/listDeals';
 
+  private readonly APIsave = 'https://persistere.com.br/termsheet/saveDeals';
+
   constructor(private http: HttpClient) { }
 
   list(){
@@ -19,5 +21,10 @@ export class DealsService {
       first() //get only the first load
       // ,tap(deals => console.log(deals)) //show my retun on console.log
     )
+  }
+
+  save(record: Deals){
+    console.log(record)
+    this.http.post<Deals>(this.APIsave, record).pipe(first())
   }
 }

@@ -1,5 +1,5 @@
 export interface Deals {
-  _id: number;
+  id: number;
   DealName: string;
   PurchasePrice: any;
   Address: string;
