@@ -9,7 +9,7 @@ import {HttpClient} from '@angular/common/http'
 })
 export class DealsService {
 
-  private readonly API = 'https://persistere.com.br/termsheet/listDealsEOO';
+  private readonly API = 'https://persistere.com.br/termsheet/listDeals';
 
   constructor(private http: HttpClient) { }
 

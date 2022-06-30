@@ -1,3 +1,4 @@
+import { DealFormComponent } from './../deal-form/deal-form.component';
 import { ErrorDialogComponent } from './../../shared/components/error-dialog/error-dialog.component';
 import { catchError, Observable, of } from 'rxjs';
 import { DealsService } from './../services/deals.service';
@@ -34,10 +35,12 @@ export class DealsComponent implements OnInit {
 
   errorDialog(errorMsg: string) {
     this.dialog.open(ErrorDialogComponent, {
-      data: {
-        animal: errorMsg,
-      },
+      data: errorMsg,
     });
+  }
+
+  addDeal(){
+    this.dialog.open(DealFormComponent);
   }
 
   ngOnInit(): void {}
