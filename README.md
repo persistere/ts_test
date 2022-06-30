@@ -27,3 +27,5 @@ Points of Consideration:
 3. Create the interface and table list - https://youtu.be/SinLx28ZANw
 4. Improving and organization Moludes - https://youtu.be/lNMhze4nkWY
 5. Start Services - https://youtu.be/PHy7lbHX2bc
+6. Call API List Deals with Observable - https://youtu.be/CgUd7Bwrscs
+7. Call API and put spinner - https://youtu.be/ImOVB2a5GrQ
