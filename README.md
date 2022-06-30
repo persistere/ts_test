@@ -29,3 +29,5 @@ Points of Consideration:
 5. Start Services - https://youtu.be/PHy7lbHX2bc
 6. Call API List Deals with Observable - https://youtu.be/CgUd7Bwrscs
 7. Call API and put spinner - https://youtu.be/ImOVB2a5GrQ
+8. Treating error service api error and create dialog error - https://youtu.be/JrrE4sYYgFQ
+9. 
