@@ -1,7 +1,10 @@
-import { Observable } from 'rxjs';
+import { ErrorDialogComponent } from './../../shared/components/error-dialog/error-dialog.component';
+import { catchError, Observable, of } from 'rxjs';
 import { DealsService } from './../services/deals.service';
 import { Deals } from './../model/deals';
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-deals',
@@ -12,16 +15,6 @@ export class DealsComponent implements OnInit {
 
   deals$: Observable<Deals[]>;
 
-  // deals: Deals[] = [
-  //   {
-  //     _id: 1,
-  //     DealName: 'Name of Deeal',
-  //     PurchasePrice: '$9.000',
-  //     Address: 'Av Interlagos 4455',
-  //     NetOperatingIncome: '$23.000',
-  //     CapRate: '5%',
-  //   },
-  // ];
   displayedColumns = [
     'DealName',
     'PurchasePrice',
@@ -30,8 +23,21 @@ export class DealsComponent implements OnInit {
     'CapRate',
   ];
 
-  constructor(private dealsService: DealsService) {
-    this.deals$ = this.dealsService.list();
+  constructor(private dealsService: DealsService, public dialog: MatDialog) {
+    this.deals$ = this.dealsService.list().pipe(
+      catchError( error => { //treating error to dont load forever
+        this.errorDialog('Error to load')
+        return of([])
+      })
+    );
+  }
+
+  errorDialog(errorMsg: string) {
+    this.dialog.open(ErrorDialogComponent, {
+      data: {
+        animal: errorMsg,
+      },
+    });
   }
 
   ngOnInit(): void {}

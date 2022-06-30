@@ -9,15 +9,15 @@ import {HttpClient} from '@angular/common/http'
 })
 export class DealsService {
 
-  private readonly API = 'https://persistere.com.br/termsheet/listDeals';
+  private readonly API = 'https://persistere.com.br/termsheet/listDealsEOO';
 
   constructor(private http: HttpClient) { }
 
   list(){
     return this.http.get<Deals[]>(this.API)
     .pipe(
-      first(), //get only the first load
-      tap(deals => console.log(deals)) //show my retun on console.log
+      first() //get only the first load
+      // ,tap(deals => console.log(deals)) //show my retun on console.log
     )
   }
 }
