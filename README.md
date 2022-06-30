@@ -30,4 +30,6 @@ Points of Consideration:
 6. Call API List Deals with Observable - https://youtu.be/CgUd7Bwrscs
 7. Call API and put spinner - https://youtu.be/ImOVB2a5GrQ
 8. Treating error service api error and create dialog error - https://youtu.be/JrrE4sYYgFQ
-9. 
+9. Start to create form add - https://youtu.be/PbiPnoIfvn8
+10. Open form on dialog - https://youtu.be/rm_RcPZ7RgI
+11. 
