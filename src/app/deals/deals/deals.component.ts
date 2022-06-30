@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { DealsService } from './../services/deals.service';
 import { Deals } from './../model/deals';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,16 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./deals.component.scss'],
 })
 export class DealsComponent implements OnInit {
-  deals: Deals[] = [
-    {
-      _id: 1,
-      DealName: 'Name of Deeal',
-      PurchasePrice: '$9.000',
-      Address: 'Av Interlagos 4455',
-      NetOperatingIncome: '$23.000',
-      CapRate: '5%',
-    },
-  ];
+
+  deals$: Observable<Deals[]>;
+
+  // deals: Deals[] = [
+  //   {
+  //     _id: 1,
+  //     DealName: 'Name of Deeal',
+  //     PurchasePrice: '$9.000',
+  //     Address: 'Av Interlagos 4455',
+  //     NetOperatingIncome: '$23.000',
+  //     CapRate: '5%',
+  //   },
+  // ];
   displayedColumns = [
     'DealName',
     'PurchasePrice',
@@ -25,7 +30,9 @@ export class DealsComponent implements OnInit {
     'CapRate',
   ];
 
-  constructor() {}
+  constructor(private dealsService: DealsService) {
+    this.deals$ = this.dealsService.list();
+  }
 
   ngOnInit(): void {}
 }

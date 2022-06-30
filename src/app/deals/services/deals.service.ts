@@ -1,3 +1,5 @@
+import { first, tap } from 'rxjs';
+import { Deals } from './../model/deals';
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 
@@ -7,5 +9,15 @@ import {HttpClient} from '@angular/common/http'
 })
 export class DealsService {
 
-  constructor(http: HttpClient) { }
+  private readonly API = 'https://persistere.com.br/termsheet/listDeals';
+
+  constructor(private http: HttpClient) { }
+
+  list(){
+    return this.http.get<Deals[]>(this.API)
+    .pipe(
+      first(), //get only the first load
+      tap(deals => console.log(deals)) //show my retun on console.log
+    )
+  }
 }
