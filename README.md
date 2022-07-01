@@ -38,8 +38,10 @@ Points of Consideration:
 14. Finish Add Deals - https://youtu.be/P3NzKVxb2sI
 15. Test Angular Jasmine & Karma  - https://youtu.be/UkOQrz7Z-t4
 
-
+<img width="1280" alt="Captura de Tela 2022-07-01 às 18 39 51" src="https://user-images.githubusercontent.com/32207134/176971826-a898e745-f1b7-4833-9f85-9214860d04db.png">
 
 <img width="1279" alt="Captura de Tela 2022-07-01 às 17 39 06" src="https://user-images.githubusercontent.com/32207134/176971824-9133d038-3125-4228-b693-f099a919bdb9.png">
-<img width="1280" alt="Captura de Tela 2022-07-01 às 18 39 51" src="https://user-images.githubusercontent.com/32207134/176971826-a898e745-f1b7-4833-9f85-9214860d04db.png">
+
+
+
 
