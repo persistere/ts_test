@@ -35,5 +35,5 @@ Points of Consideration:
 11. Implementing Form Builder and Form Group - https://youtu.be/SvkXP1kQYcg
 12. Call the API to save Deals - https://youtu.be/nWeZI0VHuhk
 13. Fix Cors Issues - https://youtu.be/ftQ3DoO7eI4
-14. 
+14. 14 Finish Add Deals - https://youtu.be/P3NzKVxb2sI
 
