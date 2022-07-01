@@ -6,7 +6,6 @@ import { Deals } from './../model/deals';
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 
-
 @Component({
   selector: 'app-deals',
   templateUrl: './deals.component.html',
@@ -14,7 +13,7 @@ import {MatDialog} from '@angular/material/dialog';
 })
 export class DealsComponent implements OnInit {
 
-  deals$: Observable<Deals[]>;
+  deals$!: Observable<Deals[]>;
 
   displayedColumns = [
     'DealName',
@@ -25,6 +24,10 @@ export class DealsComponent implements OnInit {
   ];
 
   constructor(private dealsService: DealsService, public dialog: MatDialog) {
+
+  }
+
+  listDeals(){
     this.deals$ = this.dealsService.list().pipe(
       catchError( error => { //treating error to dont load forever
         this.errorDialog('Error to load')
@@ -43,5 +46,10 @@ export class DealsComponent implements OnInit {
     this.dialog.open(DealFormComponent);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.listDeals()
+    this.dialog.afterAllClosed.subscribe(()=>{
+      this.listDeals()
+    })
+  }
 }

@@ -25,6 +25,6 @@ export class DealsService {
 
   save(record: Deals){
     console.log(record)
-    this.http.post<Deals>(this.APIsave, record).pipe(first())
+    return this.http.post<Deals>(this.APIsave, record).pipe(first())
   }
 }
