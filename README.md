@@ -40,7 +40,9 @@ Points of Consideration:
 
 
 
-<img src="[https://user-images.githubusercontent.com/499192/57450172-1a955f80-725e-11e9-9fed-267179bdab15.gif](https://user-images.githubusercontent.com/32207134/176971826-a898e745-f1b7-4833-9f85-9214860d04db.png)" >
+<img src="[https://user-images.githubusercontent.com/499192/57450172-1a955f80-725e-11e9-9fed-267179bdab15.gif](https://user-images.githubusercontent.com/32207134/176971826-a898e745-f1b7-4833-9f85-9214860d04db.png)" width="500px" >
+
+
 
 
 
