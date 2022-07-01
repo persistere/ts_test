@@ -29,3 +29,12 @@ Points of Consideration:
 5. Start Services - https://youtu.be/PHy7lbHX2bc
 6. Call API List Deals with Observable - https://youtu.be/CgUd7Bwrscs
 7. Call API and put spinner - https://youtu.be/ImOVB2a5GrQ
+8. Treating error service api error and create dialog error - https://youtu.be/JrrE4sYYgFQ
+9. Start to create form add - https://youtu.be/PbiPnoIfvn8
+10. Open form on dialog - https://youtu.be/rm_RcPZ7RgI
+11. Implementing Form Builder and Form Group - https://youtu.be/SvkXP1kQYcg
+12. Call the API to save Deals - https://youtu.be/nWeZI0VHuhk
+13. Fix Cors Issues - https://youtu.be/ftQ3DoO7eI4
+14. Finish Add Deals - https://youtu.be/P3NzKVxb2sI
+15. Test Angular Jasmine & Karma  - https://youtu.be/UkOQrz7Z-t4
+
