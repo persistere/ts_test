@@ -1,0 +1,8 @@
+{
+  "/termsheet/saveDeals":{
+    "target": "https://persistere.com.br",
+    "security": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
