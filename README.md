@@ -40,10 +40,6 @@ Points of Consideration:
 
 
 
-<img src="[https://user-images.githubusercontent.com/499192/57450172-1a955f80-725e-11e9-9fed-267179bdab15.gif](https://user-images.githubusercontent.com/32207134/176971826-a898e745-f1b7-4833-9f85-9214860d04db.png)" width="500px" >
-
-
-
-
-
+<img width="1279" alt="Captura de Tela 2022-07-01 às 17 39 06" src="https://user-images.githubusercontent.com/32207134/176971824-9133d038-3125-4228-b693-f099a919bdb9.png">
+<img width="1280" alt="Captura de Tela 2022-07-01 às 18 39 51" src="https://user-images.githubusercontent.com/32207134/176971826-a898e745-f1b7-4833-9f85-9214860d04db.png">
 
