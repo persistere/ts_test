@@ -38,7 +38,9 @@ Points of Consideration:
 14. Finish Add Deals - https://youtu.be/P3NzKVxb2sI
 15. Test Angular Jasmine & Karma  - https://youtu.be/UkOQrz7Z-t4
 
-![alt text]([http://url/to/img.png](https://user-images.githubusercontent.com/32207134/176971623-84f02a4f-2897-46b6-ba3b-aa2665f456f8.png))
+![alt text]([https://user-images.githubusercontent.com/32207134/176971826-a898e745-f1b7-4833-9f85-9214860d04db.png))
+
+
 
 
 
