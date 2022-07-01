@@ -1,4 +1,4 @@
-<div *ngIf="deals$ | async as deals; else loading">
+<div class="loading" *ngIf="deals$ | async as deals; else loading">
   <table mat-table [dataSource]="deals" class="mat-elevation-z8">
 
     <ng-container matColumnDef="DealName">
@@ -6,24 +6,24 @@
       <td mat-cell *matCellDef="let deals"> {{deals.DealName}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="PurchasePrice">
-      <th mat-header-cell *matHeaderCellDef> Purchase Price ($) </th>
-      <td mat-cell *matCellDef="let deals"> {{deals.PurchasePrice}} </td>
-    </ng-container>
-
     <ng-container matColumnDef="Address">
       <th mat-header-cell *matHeaderCellDef> Address </th>
       <td mat-cell *matCellDef="let deals"> {{deals.Address}} </td>
     </ng-container>
 
+    <ng-container matColumnDef="PurchasePrice">
+      <th mat-header-cell *matHeaderCellDef> Purchase Price </th>
+      <td mat-cell *matCellDef="let deals"> $ {{deals.PurchasePrice}} </td>
+    </ng-container>
+
     <ng-container matColumnDef="NetOperatingIncome">
-      <th mat-header-cell *matHeaderCellDef> NetOperatingIncome </th>
-      <td mat-cell *matCellDef="let deals"> {{deals.NetOperatingIncome}} </td>
+      <th mat-header-cell *matHeaderCellDef> NOI </th>
+      <td mat-cell *matCellDef="let deals"> $ {{deals.NetOperatingIncome}} </td>
     </ng-container>
 
     <ng-container matColumnDef="CapRate">
       <th mat-header-cell *matHeaderCellDef> Cap Rate </th>
-      <td mat-cell *matCellDef="let deals"> {{deals.CapRate}} </td>
+      <td mat-cell *matCellDef="let deals"> {{deals.CapRate}} %</td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -31,19 +31,21 @@
   </table>
 </div>
 
+<section>
+  <div class="button-container">
+    <button mat-fab color="primary" (click)="addDeal()"  >
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</section>
+
 <ng-template #loading>
-  <mat-spinner></mat-spinner>
+  <div class="loading">
+    <mat-spinner></mat-spinner>
+  </div>
 </ng-template>
 
 
-<section>
 
-<div class="example-button-container">
-  <button mat-fab (click)="addDeal()"  aria-label="Example icon button with a heart icon">
-    <mat-icon>add</mat-icon>
-  </button>
-</div>
-
-</section>
 
 

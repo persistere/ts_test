@@ -1,3 +1,16 @@
 table {
   width: 100%;
 }
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container {
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  padding: 20px;
+}

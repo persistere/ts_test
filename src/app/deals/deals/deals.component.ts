@@ -1,6 +1,6 @@
 import { DealFormComponent } from './../deal-form/deal-form.component';
 import { ErrorDialogComponent } from './../../shared/components/error-dialog/error-dialog.component';
-import { catchError, Observable, of } from 'rxjs';
+import { catchError, delay, Observable, of } from 'rxjs';
 import { DealsService } from './../services/deals.service';
 import { Deals } from './../model/deals';
 import { Component, OnInit } from '@angular/core';

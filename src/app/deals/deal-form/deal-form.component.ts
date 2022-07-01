@@ -7,48 +7,38 @@ import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-deal-form',
   templateUrl: './deal-form.component.html',
-  styleUrls: ['./deal-form.component.scss']
+  styleUrls: ['./deal-form.component.scss'],
 })
 export class DealFormComponent implements OnInit {
-
   form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder,
-              private service: DealsService,
-              public dialog: MatDialog,
-              public snackBar: MatSnackBar ) {
-
+  constructor(
+    private formBuilder: FormBuilder,
+    private service: DealsService,
+    public dialog: MatDialog,
+    public snackBar: MatSnackBar
+  ) {
     this.form = this.formBuilder.group({
       DealName: [null],
       PurchasePrice: [null],
       Address: [null],
       NetOperatingIncome: [null],
-      CapRate: [null]
-
-    })
+      CapRate: [null],
+    });
   }
 
-  saveDeals(){
+  saveDeals() {
     // console.log(this.form.value)
-    this.service.save(this.form.value)
-    .subscribe(result => console.log(result));
+    this.service
+      .save(this.form.value)
+      .subscribe((result) => console.log(result));
 
-    // this.service.list().subscribe();
-
-    this.dialog.closeAll();
-
-    // this.dialog.afterAllClosed
-
-    this.openSnackBar('Save Successfully', 'ok');
-
-
+      this.openSnackBar('Save Successfully', 'ok');
   }
 
   openSnackBar(message: string, action = '', config?: MatSnackBarConfig) {
     return this.snackBar.open(message, action, config);
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
