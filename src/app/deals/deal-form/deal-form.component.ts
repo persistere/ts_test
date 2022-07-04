@@ -12,7 +12,7 @@ import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 export class DealFormComponent implements OnInit {
   form: FormGroup;
   id: any
-
+  btnAction: boolean;
   constructor(
     private formBuilder: FormBuilder,
     private service: DealsService,
@@ -20,6 +20,14 @@ export class DealFormComponent implements OnInit {
     public snackBar: MatSnackBar,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
+
+    console.log(this.data.id)
+
+    if(this.data.id){
+      this.btnAction = false;
+    } else {
+      this.btnAction = true;
+    }
 
     this.form = this.formBuilder.group({
       DealName: data ? this.data.DealName : [null],
@@ -32,12 +40,15 @@ export class DealFormComponent implements OnInit {
   }
 
   saveDeals() {
-    // console.log(this.form.value)
     this.service
       .save(this.form.value)
       .subscribe((result) => console.log(result));
 
       this.openSnackBar('Save Successfully', 'ok');
+  }
+
+  apdateDeals(){
+    this.openSnackBar('Update', 'ok');
   }
 
   openSnackBar(message: string, action = '', config?: MatSnackBarConfig) {

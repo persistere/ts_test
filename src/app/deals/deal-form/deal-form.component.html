@@ -32,7 +32,8 @@
       <span matSuffix></span>
     </mat-form-field>
 
-    <button mat-fab color="primary" (click)="saveDeals()">Salve</button>
+    <button mat-fab color="primary" *ngIf="btnAction == true" (click)="saveDeals()">Salve</button>
+    <button mat-fab color="primary" *ngIf="btnAction == false" (click)="apdateDeals()">Update</button>
 
   </div>
 </form>
