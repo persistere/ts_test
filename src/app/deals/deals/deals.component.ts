@@ -21,6 +21,7 @@ export class DealsComponent implements OnInit {
     'Address',
     'NetOperatingIncome',
     'CapRate',
+    'Edit'
   ];
 
   constructor(private dealsService: DealsService, public dialog: MatDialog) {
@@ -43,7 +44,15 @@ export class DealsComponent implements OnInit {
   }
 
   addDeal(){
-    this.dialog.open(DealFormComponent);
+    this.dialog.open(DealFormComponent, {
+      data: 'add'
+    });
+  }
+
+  editDeals(dataList: []){
+    this.dialog.open(DealFormComponent, {
+      data: dataList
+    })
   }
 
   ngOnInit(): void {
