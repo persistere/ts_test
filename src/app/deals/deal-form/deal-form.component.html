@@ -1,39 +1,53 @@
 <form [formGroup]="form" class="full-width">
   <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Deal Name</mat-label>
-      <input matInput formControlName="DealName">
-    </mat-form-field>
+    <span *ngIf="btnAction == true">
+      <mat-form-field appearance="fill">
+        <mat-label>Deal Name</mat-label>
+        <input matInput formControlName="DealName" (keyup)="validateInfo($event)" required >
 
-    <mat-form-field appearance="fill" floatLabel="always">
-      <mat-label>Purchase Price</mat-label>
-      <input matInput type="number" class="example-right-align" placeholder="0" formControlName="PurchasePrice">
-      <span matPrefix>$&nbsp;</span>
-      <span matSuffix>.00</span>
-    </mat-form-field>
+      </mat-form-field>
 
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Purchase Price</mat-label>
+        <input matInput type="number" class="example-right-align" placeholder="0" formControlName="PurchasePrice">
+        <span matPrefix>$&nbsp;</span>
+        <span matSuffix></span>
+      </mat-form-field>
 
-    <mat-form-field appearance="fill" floatLabel="always">
-      <mat-label>NOI</mat-label>
-      <input matInput type="number" class="example-right-align" placeholder="0" formControlName="NetOperatingIncome">
-      <span matPrefix>$&nbsp;</span>
-      <span matSuffix>.00</span>
-    </mat-form-field>
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>NOI</mat-label>
+        <input matInput type="number" class="example-right-align" placeholder="0" formControlName="NetOperatingIncome">
+        <span matPrefix>$&nbsp;</span>
+        <span matSuffix></span>
+      </mat-form-field>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Address</mat-label>
-      <input matInput formControlName="Address">
-    </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="Address">
+      </mat-form-field>
 
-    <mat-form-field appearance="fill" floatLabel="always">
-      <mat-label>Cap</mat-label>
-      <input matInput type="number" class="example-right-align" placeholder="0" formControlName="CapRate">
-      <span matPrefix>$&nbsp;</span>
-      <span matSuffix></span>
-    </mat-form-field>
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Cap</mat-label>
+        <input matInput type="number" class="example-right-align" placeholder="0" formControlName="CapRate">
+        <span matPrefix>%&nbsp;</span>
+        <span matSuffix></span>
+      </mat-form-field>
+      <span *ngIf="btnAction == true">
+        <button mat-fab color="primary"  [disabled]="!eneDin" (click)="saveDeals()">Salve</button>
+      </span>
+    </span>
 
-    <button mat-fab color="primary" *ngIf="btnAction == true" (click)="saveDeals()">Salve</button>
-    <button mat-fab color="primary" *ngIf="btnAction == false" (click)="apdateDeals()">Update</button>
+    <span *ngIf="btnAction == false">
+
+      <div mat-dialog-content>
+        <p>Do you really want to remove the deal? </p>
+      </div>
+
+      <div mat-dialog-actions>
+        <button mat-raised-button color="primary" [disabled]="!eneDinClose" (click)="removeDeals()">Yes</button>
+      </div>
+
+    </span>
 
   </div>
 </form>

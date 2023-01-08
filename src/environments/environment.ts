@@ -4,9 +4,7 @@
 
 export const environment = {
   production: false,
-  mapbox: {
-    accessToken: 'accessToken: YOUR_TOKEN'
-  }
+  apiUrl: 'https://persistere.com.br/termsheet'
 };
 
 /*

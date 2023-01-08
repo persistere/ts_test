@@ -1,8 +1,9 @@
 export interface Deals {
   id: number;
   DealName: string;
-  PurchasePrice: any;
+  PurchasePrice: number;
   Address: string;
-  NetOperatingIncome: any;
-  CapRate: any;
+  NetOperatingIncome: number;
+  CapRate: number;
+  msn: string;
 }

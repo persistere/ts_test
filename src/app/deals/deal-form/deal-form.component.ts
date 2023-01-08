@@ -11,8 +11,11 @@ import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 })
 export class DealFormComponent implements OnInit {
   form: FormGroup;
-  id: any
+  id: any;
   btnAction: boolean;
+  eneDin = false;
+  eneDinClose = true;
+
   constructor(
     private formBuilder: FormBuilder,
     private service: DealsService,
@@ -20,10 +23,7 @@ export class DealFormComponent implements OnInit {
     public snackBar: MatSnackBar,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
-
-    console.log(this.data.id)
-
-    if(this.data.id){
+    if (this.data.id) {
       this.btnAction = false;
     } else {
       this.btnAction = true;
@@ -35,20 +35,37 @@ export class DealFormComponent implements OnInit {
       Address: data ? this.data.Address : [null],
       NetOperatingIncome: data ? this.data.NetOperatingIncome : [null],
       CapRate: data ? this.data.CapRate : [null],
+      Id: data ? this.data.id : [null],
     });
+  }
 
+  validateInfo(event: any) {
+    if (event.target.value == null || event.target.value == '') {
+      this.eneDin = false;
+    } else {
+      this.eneDin = true;
+    }
+    return this.eneDin;
   }
 
   saveDeals() {
+    this.eneDin = false;
     this.service
       .save(this.form.value)
-      .subscribe((result) => console.log(result));
-
-      this.openSnackBar('Save Successfully', 'ok');
+      .subscribe((result) => this.showMsg(result.msn));
   }
 
-  apdateDeals(){
-    this.openSnackBar('Update', 'ok');
+  removeDeals() {
+    this.eneDinClose = false;
+    this.service
+      .remove(this.form.value)
+      .subscribe((result) => this.showMsg(result.msn));
+  }
+
+  showMsg(m: any) {
+    this.openSnackBar(m, 'ok');
+    this.eneDin = false;
+    this.eneDinClose = false;
   }
 
   openSnackBar(message: string, action = '', config?: MatSnackBarConfig) {
