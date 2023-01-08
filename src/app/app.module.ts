@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { NgxCurrencyModule } from "ngx-currency";
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { MatIconModule } from '@angular/material/icon';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    NgxCurrencyModule
   ],
   providers: [],
   bootstrap: [AppComponent]

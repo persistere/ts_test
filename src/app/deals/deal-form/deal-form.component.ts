@@ -1,6 +1,6 @@
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { DealsService } from './../services/deals.service';
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 
@@ -11,10 +11,16 @@ import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 })
 export class DealFormComponent implements OnInit {
   form: FormGroup;
-  id: any;
+  id!: number;
   btnAction: boolean;
+  price!: number;
+  noi!: number;
+
   eneDin = false;
   eneDinClose = true;
+
+  @ViewChild('getPrice') getPrice:ElementRef | undefined;
+  @ViewChild('getNoi') getNoi:ElementRef | undefined;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -37,6 +43,13 @@ export class DealFormComponent implements OnInit {
       CapRate: data ? this.data.CapRate : [null],
       Id: data ? this.data.id : [null],
     });
+  }
+
+  calcCap() {
+    this.price = this.getPrice?.nativeElement.value;
+    this.noi = this.getNoi?.nativeElement.value;
+    let calc = (( this.price * this.noi )/100);
+    return calc;
   }
 
   validateInfo(event: any) {
